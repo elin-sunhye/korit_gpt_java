@@ -10,6 +10,7 @@ public class Main {
         UserServiceImpl2 userService2 = new UserServiceImpl2();
         UserController userController = new UserController(userService);
 
+        System.out.println("asdasdadasda");
         userController.signUp();
         userController.signIn();
         userController.setUserService(userService2);
