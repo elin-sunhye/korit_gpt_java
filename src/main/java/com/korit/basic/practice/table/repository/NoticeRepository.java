@@ -1,7 +1,5 @@
 package com.korit.basic.practice.table.repository;
 
-import com.korit.basic.practice.table.dto.request.NoticeRequestDto;
-import com.korit.basic.practice.table.dto.response.NoticeResponseDto;
 import com.korit.basic.practice.table.entity.Notice;
 
 import java.util.ArrayList;
@@ -26,7 +24,8 @@ public class NoticeRepository {
 
     public Optional<Notice> findById(long id) {
         return noticeStorage.stream()
-                .filter(nt -> nt.getId() == id).findFirst();
+                .filter(nt -> nt.getId() == id)
+                .findFirst();
     }
 
     public void delete(long id) {

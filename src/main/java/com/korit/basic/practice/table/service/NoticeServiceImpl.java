@@ -45,8 +45,8 @@ public class NoticeServiceImpl implements NoticeService {
 
         findByNotice.setTitle(requestDto.getTitle());
         findByNotice.setCont(requestDto.getCont());
-        findByNotice.setFix(requestDto.isFix());
         findByNotice.setAttachedFile(requestDto.isAttachedFile());
+        findByNotice.setFix(requestDto.isFix());
     }
 
     @Override

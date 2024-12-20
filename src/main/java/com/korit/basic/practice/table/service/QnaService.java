@@ -9,6 +9,6 @@ import java.util.List;
 public interface QnaService {
     public void createQna(QnaRequestDto requestDto);
     public List<QnaResponseDto> allQnas();
-    public void updateQna(Long id, QnaRequestDto requestDto);
-    public void deleteQna(Long id);
+    public void updateQna(long id, QnaRequestDto requestDto);
+    public void deleteQna(long id);
 }
