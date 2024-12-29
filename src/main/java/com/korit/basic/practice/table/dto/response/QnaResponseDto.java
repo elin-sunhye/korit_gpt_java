@@ -4,9 +4,11 @@ import com.korit.basic.practice.table.entity.Category;
 import com.korit.basic.practice.table.entity.Qna;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
+@ToString
 public class QnaResponseDto {
     private long id; // 테이블 고유 번호
 

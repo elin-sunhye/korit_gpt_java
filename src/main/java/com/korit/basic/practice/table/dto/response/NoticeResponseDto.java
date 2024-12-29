@@ -3,9 +3,11 @@ package com.korit.basic.practice.table.dto.response;
 import lombok.Getter;
 import lombok.Setter;
 import com.korit.basic.practice.table.entity.Notice;
+import lombok.ToString;
 
 @Getter
 @Setter
+@ToString
 public class NoticeResponseDto {
     private long id; // 테이블 고유 번호
 

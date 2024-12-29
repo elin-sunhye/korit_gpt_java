@@ -24,7 +24,7 @@ public class QnaController {
     }
 
 //    질문 등록
-    private void createQnaController(QnaRequestDto requestDto) {
+public void createQnaController(QnaRequestDto requestDto) {
         if(isValidRequest(requestDto)) {
             service.createQna(requestDto);
             System.out.println("Created Qna");
@@ -34,7 +34,7 @@ public class QnaController {
     }
     
 //    질문 전체 조회
-    private void allQnaController() {
+public void allQnaController() {
         List<QnaResponseDto> qnas = service.allQnas();
         
         if(qnas.isEmpty()) {
@@ -45,7 +45,7 @@ public class QnaController {
     }
     
 //    질문 수정
-    private void updateQnaController(Long id, QnaRequestDto requestDto) {
+public void updateQnaController(Long id, QnaRequestDto requestDto) {
         if(isValidRequest(requestDto)) {
             service.updateQna(id, requestDto);
             System.out.println("Updated qnas");
@@ -55,7 +55,7 @@ public class QnaController {
     }
     
 //    질문 삭제
-    private void deleteQnaController(Long id) {
+public void deleteQnaController(Long id) {
         try {
             service.deleteQna(id);
         } catch (Exception e) {

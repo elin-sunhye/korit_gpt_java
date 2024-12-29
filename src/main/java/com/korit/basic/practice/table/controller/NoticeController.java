@@ -19,7 +19,7 @@ public class NoticeController {
     }
 
     //    검증 메서드
-    private boolean isValidRequest(NoticeRequestDto requestDto) {
+    public boolean isValidRequest(NoticeRequestDto requestDto) {
         boolean isTitle = requestDto.getTitle() != null && !requestDto.getTitle().isEmpty();
         boolean isCont = requestDto.getCont() != null && !requestDto.getCont().isEmpty();
 
@@ -28,7 +28,7 @@ public class NoticeController {
 
 
     //    공지사항 등록
-    private void createNoticeController(NoticeRequestDto requestDto) {
+    public void createNoticeController(NoticeRequestDto requestDto) {
         if (isValidRequest(requestDto)) {
             service.createNotice(requestDto);
             System.out.println("Created notice");
@@ -38,7 +38,7 @@ public class NoticeController {
     }
 
     //    공지사항 전체 조회
-    private void allNoticeController() {
+    public void allNoticeController() {
         List<NoticeResponseDto> notices = service.allNotices();
 
         if (notices.isEmpty()) {
@@ -49,7 +49,7 @@ public class NoticeController {
     }
 
     //    공지사항 수정
-    private void updateNoticeController(long id, NoticeRequestDto requestDto) {
+    public void updateNoticeController(long id, NoticeRequestDto requestDto) {
         if (isValidRequest(requestDto)) {
             service.updateNotice(id, requestDto);
             System.out.println("Updated notice");
@@ -59,7 +59,7 @@ public class NoticeController {
     }
 
     //    공지사항 삭제
-    private void deleteNoticeController(long id) {
+    public void deleteNoticeController(long id) {
         try {
             service.deleteNotice(id);
         } catch (Exception e) {
